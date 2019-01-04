@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp">
+
+    <EditText
+        android:id="@+id/editTextKEY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="KEY"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/editTextPASS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PASS"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black" />
+</LinearLayout>
