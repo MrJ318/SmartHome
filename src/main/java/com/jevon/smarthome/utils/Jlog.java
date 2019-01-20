@@ -5,7 +5,7 @@ import android.util.Log;
 public class Jlog {
 
     public static final String TAG = "Mr.J";
-    private static boolean isLog = true;
+    private static boolean isLog = false;
 
     public static void d(String tag, String msg) {
         if (isLog) {

@@ -6,6 +6,7 @@ import com.jevon.smarthome.bean.DevicesPaginator;
 import com.jevon.smarthome.espush.EspushSdk;
 import com.jevon.smarthome.presenter.AddDevicesPresenter;
 import com.jevon.smarthome.utils.DButils;
+import com.jevon.smarthome.utils.Jlog;
 import com.jevon.smarthome.utils.SmartHomeApp;
 
 import org.json.JSONException;
@@ -95,8 +96,8 @@ public class AddDevicesImpl {
         }
         //查询数据库中是否已存在将要添加的端口
         DButils db = new DButils(SmartHomeApp.getContext());
-        int d = db.read("Device=?", new String[]{device + ""});
-        int o = db.read("Io=?", new String[]{io + ""});
+        int d = db.read("Device=?",new String[]{"Device"} ,new String[]{device + ""});
+        int o = db.read("Io=?", new String[]{"Io"},new String[]{io + ""});
         if (d != 0 & o != 0) {
             mAddPresenter.setAlready();
             return;

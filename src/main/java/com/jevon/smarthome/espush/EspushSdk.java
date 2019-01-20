@@ -34,6 +34,8 @@ public class EspushSdk {
         SharedPreferences sp = SmartHomeApp.getContext().getSharedPreferences("smarthome", Context.MODE_PRIVATE);
         Key = sp.getString("KEY", "");
         Pswd = sp.getString("PASS", "");
+//        Key = "3615541522100107";
+//        Pswd = "9f95e8bd86858b01063c42fdc30e6115";
     }
 
     private String commonRequest(String uri, String method, Map<String, String> args, String body)

@@ -26,8 +26,8 @@ public class DButils {
         return cursor;
     }
 
-    public int read(String selection, String[] selectionargs) {
-        Cursor cursor = db.query("Devices", null, selection,
+    public int read(String selection,String[] col, String[] selectionargs) {
+        Cursor cursor = db.query("Devices", col, selection,
                 selectionargs, null, null, null);
         if (cursor.getCount() != 0) {
             return cursor.getCount();
