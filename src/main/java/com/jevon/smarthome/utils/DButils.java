@@ -26,13 +26,10 @@ public class DButils {
         return cursor;
     }
 
-    public int read(String selection,String[] col, String[] selectionargs) {
-        Cursor cursor = db.query("Devices", col, selection,
+    public int read(String selection, String[] selectionargs) {
+        Cursor cursor = db.query("Devices", null, selection,
                 selectionargs, null, null, null);
-        if (cursor.getCount() != 0) {
-            return cursor.getCount();
-        }
-        return 0;
+        return cursor.getCount();
     }
 
     public long write(String name, Integer device, Integer io, Integer id) {
@@ -48,7 +45,7 @@ public class DButils {
         db.delete("Devices", whereClause, whereArgs);
     }
 
-    public void updata(String name,Integer id) {
+    public void updata(String name, Integer id) {
         ContentValues values = new ContentValues();
         values.put("Name", name);
         db.update("Devices", values, "Id=" + id, null);

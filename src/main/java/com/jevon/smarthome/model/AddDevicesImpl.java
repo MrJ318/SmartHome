@@ -96,9 +96,8 @@ public class AddDevicesImpl {
         }
         //查询数据库中是否已存在将要添加的端口
         DButils db = new DButils(SmartHomeApp.getContext());
-        int d = db.read("Device=?",new String[]{"Device"} ,new String[]{device + ""});
-        int o = db.read("Io=?", new String[]{"Io"},new String[]{io + ""});
-        if (d != 0 & o != 0) {
+        int d = db.read("Id=?", new String[]{id + ""});
+        if (d > 0) {
             mAddPresenter.setAlready();
             return;
         }
