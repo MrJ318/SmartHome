@@ -71,7 +71,7 @@ public class DeviceAdapter extends BaseAdapter {
 
         tName.setText(mNameList.get(i));
         tSubName.setText(mIDList.get(i).toString());
-        if (mStatuList[i]) {
+        if (!mStatuList[i]) {
             imgSwitch.setImageResource(R.drawable.switchon);
         } else {
             imgSwitch.setImageResource(R.drawable.switchoff);
